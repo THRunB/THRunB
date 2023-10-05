@@ -1,0 +1,137 @@
+import idc
+
+def TLE(hex_value):
+    hex_string = hex(hex_value)[2:]  
+    hex_string_padded = hex_string.zfill(8) 
+    little_endian = bytes.fromhex(hex_string_padded)[::-1]  
+    return int.from_bytes(little_endian, byteorder='big')  
+
+start_address = 0xFFF580C0
+
+src_ary = [0x8A363E6C, 0x5266C0CA, 0xE48DACA3, 0xE3EC006C, 0x7F3E571A, 0x5489938D, 0x677EDC34, 0xF7CAAB74, 0x8AB769B7, 0xFECEDF0D, 0x98C32D0E, 0x7600D5E2, 0x932B1A27, 0xEEF3B60F, 0x0A69D179, 0x2404D802, 0x27D4A3A8, 0xDDE7C4B7, 0x51ACD4E9, 0x92484046, 0xCF0F4845, 0x277B514E, 0x7B236A3E, 0x74884FD2, 0x61B3F4C3, 0xC7D94BCD, 0xCA64246A, 0x7591B43A, 0x65933D07, 0x25C8F449, 0xAFF20971, 0xADFDF18E]
+
+i = 0 
+while i < len(src_ary):
+    ptr_to_patch = start_address + (i * 0x4)
+    hex_to_patch = (TLE(src_ary[i]))
+    i = i + 1
+    idc.patch_dword(ptr_to_patch, hex_to_patch)
+    print(hex_to_patch)
+
+# Main function Set
+import idc
+start_address = 0xFFC299B0
+def TLE(hex_value):
+    hex_string = hex(hex_value)[2:]  
+    hex_string_padded = hex_string.zfill(8) 
+    little_endian = bytes.fromhex(hex_string_padded)[::-1]  
+    return int.from_bytes(little_endian, byteorder='big')  
+src_ary = [0x00000000, 0x838EA8C0, 0x0000A8C0, 0x6466D9DC, 0x00000000, 0x03F00000, 0xC0A88E87, 0x1C006C87, 0xEEFB0001, 0x00F60E6F, 0xDD42EB2C, 0xD557D769, 0x9A9420D6, 0x58564546, 0x15708B04, 0xA0E0E163, 0x534774A5, 0x4B89026D, 0xFC1C3FE3, 0x46236F8E, 0x36EE3B26, 0xF274F3F5, 0xE470B279, 0x818E42C3, 0xD590FF42, 0xF9E5537E, 0xF23B569E, 0x1F2E5F71, 0xEE89E9E5, 0x21AF1D03, 0xB16C0E72, 0xE9470200]
+i = 0 
+while i < len(src_ary):
+    ptr_to_patch = start_address + (i * 0x4)
+    hex_to_patch = (TLE(src_ary[i]))
+    i = i + 1
+    idc.patch_dword(ptr_to_patch, hex_to_patch)
+    print(hex_to_patch)
+
+# DF60 Function Set
+
+import idc
+start_address = 0xFF950C90
+def TLE(hex_value):
+    hex_string = hex(hex_value)[2:]  
+    hex_string_padded = hex_string.zfill(8) 
+    little_endian = bytes.fromhex(hex_string_padded)[::-1]  
+    return int.from_bytes(little_endian, byteorder='big')  
+src_ary = [0xF0893FA6, 0x08888002, 0xDF35F3ED, 0x197ECC2F, 0x2EBFE23C, 0xA02F0C32, 0x9DE88E97, 0x76F4FD08, 0xF398ED12, 0xFD8ED45E, 0xEC8FE4FB, 0x74699BAF, 0xF802E78F, 0x6FC41828, 0xABD73AD9, 0x5E5C7E10, 0xD4A6C526, 0x943E1A3F, 0x1916CC8D, 0x8A6C73F9, 0x8C46B8E6, 0x25D01EEB, 0xE607EF04, 0x82BF572B, 0x10B0338F, 0xE453A0DC, 0xC69F7C7E, 0x4CCC5DFE, 0x590D7935, 0x26CFD2EB, 0x6E207AFE, 0xA54B0B84]
+i = 0 
+while i < len(src_ary):
+    ptr_to_patch = start_address + (i * 0x4)
+    hex_to_patch = (TLE(src_ary[i]))
+    i = i + 1
+    idc.patch_dword(ptr_to_patch, hex_to_patch)
+    print(hex_to_patch)
+
+
+
+# CheckSum Function Set
+
+import idc
+start_address = 0x9E42384
+def TLE(hex_value):
+    hex_string = hex(hex_value)[2:]  
+    hex_string_padded = hex_string.zfill(8) 
+    little_endian = bytes.fromhex(hex_string_padded)[::-1]  
+    return int.from_bytes(little_endian, byteorder='big')  
+src_ary = [0xFF88FFFF, 0xFF88FFFF, 0xFF88FFFF, 0xFF88FFFF, 0xFF88FFFF, 0xFF88FFFF, 0xFF88FFFF]
+i = 0 
+while i < len(src_ary):
+    ptr_to_patch = start_address + (i * 0x4)
+    hex_to_patch = (TLE(src_ary[i]))
+    i = i + 1
+    idc.patch_dword(ptr_to_patch, hex_to_patch)
+    print(hex_to_patch)
+
+
+#Final Pyld Crypt Test
+
+import idc
+start_address = 0xFF835BB0
+def TLE(hex_value):
+    hex_string = hex(hex_value)[2:]  
+    hex_string_padded = hex_string.zfill(8) 
+    little_endian = bytes.fromhex(hex_string_padded)[::-1]  
+    return int.from_bytes(little_endian, byteorder='big')  
+src_ary = [0x00026906, 0x3A500102, 0x7C9EF4E4, 0x36C2BE01, 0xEB89BCAA, 0xF7D5FEC3, 0xB4BA1558, 0xD59167CA, 0x9DEDEF6E, 0xA2EC45E8, 0x91BEEFB3, 0x3E3CBAA7, 0x5FFEF702, 0xB349C1B3, 0x01194E05, 0xFE554A28, 0x6DF84625, 0x55DEFB27, 0xD886E236, 0xFD9F8170, 0x88AC2E3B, 0x41BEE3DD, 0x51E38900, 0x01005415, 0xC753001C, 0x838EA8C0, 0x0000F003, 0x00000000, 0xF4196B64, 0xC0A80000, 0xC0A88E82, 0x00000000]
+i = 0 
+while i < len(src_ary):
+    ptr_to_patch = start_address + (i * 0x4)
+    hex_to_patch = (TLE(src_ary[i]))
+    i = i + 1
+    idc.patch_dword(ptr_to_patch, hex_to_patch)
+    print(hex_to_patch)
+
+
+
+#Pyld Send Test
+
+import idc
+start_address = 0xFF9BBE30
+def TLE(hex_value):
+    hex_string = hex(hex_value)[2:]  
+    hex_string_padded = hex_string.zfill(8) 
+    little_endian = bytes.fromhex(hex_string_padded)[::-1]  
+    return int.from_bytes(little_endian, byteorder='big')  
+src_ary = [901329135,263922692,1439001897,3310632427,3406803283,1468180773,2934005422,2702401680,3692538718,3677680450,1464312367,533225425,271379820,3641766010,1947663567,2220221967,184346839,1382476951,2454409335,2657235323,3601289449,3713947835,2016411788,71838137,2772280327,2364705114,3841585755,2804929555,2460541732,3828104930,2361126129,75882972]
+
+i = 0 
+while i < len(src_ary):
+    ptr_to_patch = start_address + (i * 0x4)
+    hex_to_patch = (TLE(src_ary[i]))
+    i = i + 1
+    idc.patch_dword(ptr_to_patch, hex_to_patch)
+    print(hex_to_patch)
+
+
+#CheckSum Test
+
+import idc
+start_address = 0x09897EB4
+def TLE(hex_value):
+    hex_string = hex(hex_value)[2:]  
+    hex_string_padded = hex_string.zfill(8) 
+    little_endian = bytes.fromhex(hex_string_padded)[::-1]  
+    return int.from_bytes(little_endian, byteorder='big')  
+src_ary = [25770456,1272378139,3969159244,2268437382,1708520234,2576363049,1331820756,2546364303,4143133560,4232666300,357145995,809305790,1332866677,3898452947,1702991190,2237327367,4245484663,2240802803,1410421406,3567920362,641361091,691736629,1479288872,4098649296,2510879281,2693910397,110559831,4083367193,4173410887,4158508321,2022554057,3711180692,1029498439,28286179]
+
+i = 0 
+while i < len(src_ary):
+    ptr_to_patch = start_address + (i * 0x4)
+    hex_to_patch = (TLE(src_ary[i]))
+    i = i + 1
+    idc.patch_dword(ptr_to_patch, hex_to_patch)
+    print(hex_to_patch)
+
+
+    
